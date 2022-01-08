@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		368CE90B2789CD6A009EFA0F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CE90A2789CD6A009EFA0F /* DataManager.swift */; };
+		368CE90D2789CE5B009EFA0F /* PersonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CE90C2789CE5B009EFA0F /* PersonInfo.swift */; };
+		368CE90F2789F43F009EFA0F /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CE90E2789F43F009EFA0F /* WeightViewController.swift */; };
 		36B9F8A227885A7800659067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9F8A127885A7800659067 /* AppDelegate.swift */; };
 		36B9F8A427885A7800659067 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9F8A327885A7800659067 /* SceneDelegate.swift */; };
 		36B9F8A627885A7800659067 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9F8A527885A7800659067 /* FirstViewController.swift */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		355E8393C0BB876E8161AA04 /* Pods-GraphsTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphsTesting.release.xcconfig"; path = "Target Support Files/Pods-GraphsTesting/Pods-GraphsTesting.release.xcconfig"; sourceTree = "<group>"; };
+		368CE90A2789CD6A009EFA0F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		368CE90C2789CE5B009EFA0F /* PersonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfo.swift; sourceTree = "<group>"; };
+		368CE90E2789F43F009EFA0F /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		36B9F89E27885A7800659067 /* GraphsTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphsTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B9F8A127885A7800659067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36B9F8A327885A7800659067 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				36B9F8A527885A7800659067 /* FirstViewController.swift */,
+				368CE90E2789F43F009EFA0F /* WeightViewController.swift */,
 				36B9F8B527885BA800659067 /* SecondViewController.swift */,
 			);
 			path = ViewControllers;
@@ -72,6 +79,22 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		368CE910278A0B5F009EFA0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				368CE90C2789CE5B009EFA0F /* PersonInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		368CE911278A0B70009EFA0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				368CE90A2789CD6A009EFA0F /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		36B9F89527885A7800659067 = {
 			isa = PBXGroup;
 			children = (
@@ -93,9 +116,11 @@
 		36B9F8A027885A7800659067 /* GraphsTesting */ = {
 			isa = PBXGroup;
 			children = (
+				368CE910278A0B5F009EFA0F /* Model */,
 				368CE9072789CB69009EFA0F /* ViewControllers */,
-				368CE9082789CB81009EFA0F /* Storyboards */,
 				368CE9092789CBB9009EFA0F /* Support */,
+				368CE9082789CB81009EFA0F /* Storyboards */,
+				368CE911278A0B70009EFA0F /* Services */,
 				36B9F8AA27885A7A00659067 /* Assets.xcassets */,
 			);
 			path = GraphsTesting;
@@ -234,8 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				36B9F8B627885BA800659067 /* SecondViewController.swift in Sources */,
+				368CE90B2789CD6A009EFA0F /* DataManager.swift in Sources */,
 				36B9F8A627885A7800659067 /* FirstViewController.swift in Sources */,
 				36B9F8A227885A7800659067 /* AppDelegate.swift in Sources */,
+				368CE90D2789CE5B009EFA0F /* PersonInfo.swift in Sources */,
+				368CE90F2789F43F009EFA0F /* WeightViewController.swift in Sources */,
 				36B9F8A427885A7800659067 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
