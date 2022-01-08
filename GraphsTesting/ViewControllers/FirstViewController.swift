@@ -10,7 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController, ChartViewDelegate {
 
-    let barChart = BarChartView()
+    private let barChart = BarChartView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

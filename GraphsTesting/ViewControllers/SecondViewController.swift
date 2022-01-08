@@ -10,7 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController, ChartViewDelegate {
     
-    let lineChart = LineChartView()
+    private let lineChart = LineChartView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class SecondViewController: UIViewController, ChartViewDelegate {
             ChartDataEntry(x: 7 , y: 11)
         ])
         let data = LineChartData(dataSets: [set])
-        data.
         lineChart.data = data
     }
+    
 }

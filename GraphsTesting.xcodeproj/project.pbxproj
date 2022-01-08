@@ -44,6 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		368CE9072789CB69009EFA0F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				36B9F8A527885A7800659067 /* FirstViewController.swift */,
+				36B9F8B527885BA800659067 /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		368CE9082789CB81009EFA0F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				36B9F8AC27885A7A00659067 /* LaunchScreen.storyboard */,
+				36B9F8A727885A7800659067 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		368CE9092789CBB9009EFA0F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				36B9F8A127885A7800659067 /* AppDelegate.swift */,
+				36B9F8A327885A7800659067 /* SceneDelegate.swift */,
+				36B9F8AF27885A7A00659067 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		36B9F89527885A7800659067 = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +93,10 @@
 		36B9F8A027885A7800659067 /* GraphsTesting */ = {
 			isa = PBXGroup;
 			children = (
-				36B9F8A127885A7800659067 /* AppDelegate.swift */,
-				36B9F8A327885A7800659067 /* SceneDelegate.swift */,
-				36B9F8A527885A7800659067 /* FirstViewController.swift */,
-				36B9F8B527885BA800659067 /* SecondViewController.swift */,
-				36B9F8A727885A7800659067 /* Main.storyboard */,
+				368CE9072789CB69009EFA0F /* ViewControllers */,
+				368CE9082789CB81009EFA0F /* Storyboards */,
+				368CE9092789CBB9009EFA0F /* Support */,
 				36B9F8AA27885A7A00659067 /* Assets.xcassets */,
-				36B9F8AC27885A7A00659067 /* LaunchScreen.storyboard */,
-				36B9F8AF27885A7A00659067 /* Info.plist */,
 			);
 			path = GraphsTesting;
 			sourceTree = "<group>";
@@ -91,7 +115,6 @@
 				B38157E2C86E0C4A31B22C47 /* Pods-GraphsTesting.debug.xcconfig */,
 				355E8393C0BB876E8161AA04 /* Pods-GraphsTesting.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -364,7 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GraphsTesting/Info.plist;
+				INFOPLIST_FILE = GraphsTesting/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -393,7 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GraphsTesting/Info.plist;
+				INFOPLIST_FILE = GraphsTesting/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
