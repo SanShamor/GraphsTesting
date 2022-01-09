@@ -18,29 +18,54 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         
         lineChart.delegate = self
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        lineChart.frame = CGRect (x: 0, y: 0,
+        lineChart.frame = CGRect (x: 0,
+                                  y: 0,
                                   width: self.view.frame.size.width,
                                   height: self.view.frame.size.width)
         lineChart.center = view.center
         view.addSubview(lineChart)
         
-        // MARK: - Tutorial way
+        customizeLineChart()
+        setData()
+    }
+    
+    func setData() {
+        let set = getSetFromTexfField()
+        let data = LineChartData(dataSet: set)
+        lineChart.data = data
+    }
+    
+    func customizeLineChart() {
+        lineChart.noDataText = "Добавьте данные о весе"
+        lineChart.backgroundColor = .lightGray
+        lineChart.rightAxis.enabled = false
+        lineChart.animate(xAxisDuration: 2.5)
+        
+        lineChart.xAxis.labelPosition = .bottom
+        lineChart.xAxis.labelTextColor = .red
+        lineChart.xAxis.axisLineColor = .blue
+        
+        let yAxis = lineChart.leftAxis
+        yAxis.labelFont = .boldSystemFont(ofSize: 12)
+        yAxis.setLabelCount(4, force: false)
+        yAxis.labelTextColor = .red
+        yAxis.axisLineColor = .blue
+        yAxis.labelPosition = .outsideChart
+    }
+    
+    // MARK: - Tutorial way
+    func getHardcodeDataSet() -> LineChartDataSet  {
         let set = LineChartDataSet(entries: [
             ChartDataEntry(x: 1 , y: 7),
             ChartDataEntry(x: 2 , y: 3),
             ChartDataEntry(x: 4 , y: 10),
             ChartDataEntry(x: 7 , y: 11)
         ])
-        
-        let data = LineChartData(dataSets: [set])
-        //lineChart.data = data
-        
-        // MARK: - Another way with DataManager
+        return set
+    }
+    
+    // MARK: - Another way with DataManager
+    func getSetFromManager() -> LineChartDataSet {
         
         var entries = [ChartDataEntry] ()
         var day = 1
@@ -52,10 +77,12 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         }
         
         let secondSet = LineChartDataSet(entries: entries, label: "Another way")
-        let secondData = LineChartData(dataSet: secondSet)
-        //lineChart.data = secondData
+        return secondSet
         
-        // MARK: - withSegueAndTextfield-screen way
+    }
+    
+    // MARK: - withSegueAndTextfield-screen way
+    func getSetFromTexfField() -> LineChartDataSet {
         var entries2 = [ChartDataEntry] ()
         var days = 1
         for step in weightsFromTextField {
@@ -65,10 +92,7 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         }
         
         let thirdSet = LineChartDataSet(entries: entries2, label: "withSegueAndTextfield way")
-        let thirdData = LineChartData(dataSet: thirdSet)
-        
-        lineChart.data = thirdData
-        
+        return thirdSet
     }
     
 }
